@@ -12,9 +12,7 @@ public class Main {
         int rightCounter = 0;
 
         ArrayList<Integer> realPlaces = new ArrayList<>();
-        for (int i = 1; i <= 7; i++) {
-            realPlaces.add(i);
-        }
+        adding(realPlaces);
         Collections.shuffle(realPlaces);
 
 
@@ -22,9 +20,10 @@ public class Main {
 
 
             possiblePlaces[i] = scanner.nextInt();
+            System.out.println(realPlaces.get(i));
 
             boxesWeight[i] = (int)(Math.random()*10);
-            //System.out.println(realPlaces.get(i));
+
             if(possiblePlaces[i] == realPlaces.get(i)){
                 rightCounter++;
                 int weight = 0;
@@ -57,6 +56,11 @@ public class Main {
                 Collections.shuffle(realPlaces);
 
             }
+        }
+    }
+    public static void adding(ArrayList<Integer>realPlaces){
+        for (int i = 1; i <= 7; i++) {
+            realPlaces.add(i);
         }
     }
 }
